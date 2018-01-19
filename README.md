@@ -268,6 +268,7 @@ DuerLightOSSDK.getInstance().getClient().setAudioPlayerListener(new LightClient.
 |类型|名称|描述|
 |-|-|-|
 |LightduerResource |resources|数据点|
+
 LightduerResource详细说明：
 
 ```
