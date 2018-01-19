@@ -275,10 +275,10 @@ LightduerResource详细说明：
 public LightduerResource(int mode, int allowed, String path, byte[] staticData, LightduerResourceListener callback) {}
 ```
 
-int mode：   数据点的类型动态(LightduerResource.DUER_RES_MODE_DYNAMIC)和静态(LightduerResource.DUER_RES_MODE_STATIC)两种类型。
-int allowed：有四种类型{DUER_RES_OP_GET, DUER_RES_OP_PUT, DUER_RES_OP_POST, DUER_RES_OP_DELETE}
-String path：   开放平台上设置的数据点名称
-byte[] staticData：动态数据点可以传null，静态数据点传入静态数据点string获取到的bytes即可（static_resource.getBytes()）
+int mode：   数据点的类型动态(LightduerResource.DUER_RES_MODE_DYNAMIC)和静态(LightduerResource.DUER_RES_MODE_STATIC)两种类型。  
+int allowed：有四种类型{DUER_RES_OP_GET, DUER_RES_OP_PUT, DUER_RES_OP_POST, DUER_RES_OP_DELETE}  
+String path：   开放平台上设置的数据点名称  
+byte[] staticData：动态数据点可以传null，静态数据点传入静态数据点string获取到的bytes即可（static_resource.getBytes()）  
 LightduerResourceListener callback：数据点的监听器，内有一个监听函数
 
 ```
