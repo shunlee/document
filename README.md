@@ -294,8 +294,8 @@ LightduerResourceListener callback：数据点的监听器，内有一个监听�
 public int callback(LightduerContext context, LightduerMessage message, LightduerAddress address) {}
 ```
 
-LightduerContext context：设置数据点的上下文
- LightduerMessage message： 数据点中返回的内容，可以通过message.getPayload()获取  
+LightduerContext context： 设置数据点的上下文  
+LightduerMessage message： 数据点中返回的内容，可以通过message.getPayload()获取  
 LightduerAddress address： 区分message是从那个地址过来的
 
 **回调函数** 
