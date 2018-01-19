@@ -64,7 +64,9 @@ dependencies {
 ### 3.2  接口说明
 
 #### 3.2.1  SDK初始化
+
 初始化SDK分两步完成：1.initSdk  2.connectServer
+
 #### 3.2.1.1  init sdk
 
 **接口功能描述**
@@ -183,11 +185,13 @@ DuerLightOSSDK.getInstance().getClient().setAudioInputListener(new LightClient.I
 无
 
 **传入参数**
+
 |类型|名称|描述|
 |-|-|-|
 |LightClient.VoiceOutputListener|VoiceOutputListener|返回的tts结果回调|
 
 **回调函数** 
+
 回调函数为：speak(String url)，url为上传语音后返回tts的url地址。
 
 **实例**
@@ -208,14 +212,17 @@ DuerLightOSSDK.getInstance().getClient().setVoiceOutputListener(new LightClient.
 此监听器用于获取语音上传后的音频数据的返回，返回的数据为音频的url。
 
 **前置条件** 
+
 无
 
 **传入参数**
+
 |类型|名称|描述|
 |-|-|-|
 |LightClient.AudioPlayerListener|AudioPlayerListener|返回音频结果回调|
 
 **回调函数** 
+
 目前支持的回调函数有：int play(String url) {}，此url为音频数据的url地址。其他回调函数暂时不支持。
 
 **实例**
