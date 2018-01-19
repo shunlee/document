@@ -1,4 +1,4 @@
-#﻿轻量级DCS 3.0 Android SDK V0.0.1 文档
+# DCS 3.0 轻量级 Android SDK V0.0.1 文档
 
 ## 1 SDK概述
 
@@ -65,7 +65,7 @@ dependencies {
 
 #### 3.2.1  SDK初始化
 初始化SDK分两步完成：1.initSdk  2.connectServer
-##### 3.2.1.1  init sdk
+#### 3.2.1.1  init sdk
 
 **接口功能描述**
 
@@ -89,7 +89,7 @@ dependencies {
 DuerLightOSSDK.getInstance().getClient().init();
 ```
 
-##### 3.2.1.2 connectServer
+#### 3.2.1.2 connectServer
 
 **接口功能描述**
 
@@ -127,13 +127,14 @@ LightClient.IConnectStatusListener iConnectStatusListener = new LightClient.ICon
 ```
 
 #### 3.2.2 设置并初始化监听器
-##### 3.2.2.1 setAudioInputListener
+#### 3.2.2.1 setAudioInputListener
 
 **接口功能描述**
 
 设置此监听器用于监听当前录音器的状态：开始录音、录音停止、录音错误
 
 **前置条件** 
+
 无
 
 **传入参数**
@@ -171,13 +172,14 @@ DuerLightOSSDK.getInstance().getClient().setAudioInputListener(new LightClient.I
 });
 ```
 
-##### 3.2.2.2 setVoiceOutputListener
+#### 3.2.2.2 setVoiceOutputListener
 
 **接口功能描述**
 
 此监听器用于获取语音上传后的tts返回，返回的数据为tts的url。
 
 **前置条件** 
+
 无
 
 **传入参数**
@@ -199,7 +201,7 @@ DuerLightOSSDK.getInstance().getClient().setVoiceOutputListener(new LightClient.
 });
 ```
 
-##### 3.2.2.3 setAudioPlayerListener
+#### 3.2.2.3 setAudioPlayerListener
 
 **接口功能描述**
 
@@ -253,7 +255,7 @@ DuerLightOSSDK.getInstance().getClient().setAudioPlayerListener(new LightClient.
 
 添加数据点，需要在开放平台上添加对应的数据点，可以用于控制设备。
 
-##### addControlPoint
+#### addControlPoint
 
 **接口功能描述**
 
@@ -286,8 +288,8 @@ public int callback(LightduerContext context, LightduerMessage message, Lightdue
 ```
 
 LightduerContext context：设置数据点的上下文
- LightduerMessage message： 数据点中返回的内容，可以通过message.getPayload()获取
-LightduerAddress address： 
+ LightduerMessage message： 数据点中返回的内容，可以通过message.getPayload()获取  
+LightduerAddress address： 区分message是从那个地址过来的
 
 **回调函数** 
 
@@ -302,7 +304,7 @@ DuerLightOSSDK.getInstance().getClient().addControlPoint(resources);
 #### 3.2.4 Android通用Record（非CustomAudioRecord）相关接口
 使用sdk封装好的一套录音上传语音数据完成语音交互。
 
-##### 3.2.4.1 startRecord
+#### 3.2.4.1 startRecord
 
 **接口功能描述**
 
@@ -330,7 +332,7 @@ DuerLightOSSDK.getInstance().getClient().startRecord();
 
 此接口为用户自定义audiorecord来完成语音录制并上传，需要注意的是此接口完全使用另一套流程。不需要再调用DuerLightOSSDK.getInstance().getClient().startRecord();接口开始语音交互。
 
-##### 3.2.5.1 getCustomAudioRecord
+#### 3.2.5.1 getCustomAudioRecord
 
 **接口功能描述**
 
@@ -354,7 +356,7 @@ DuerLightOSSDK.getInstance().getClient().startRecord();
 DuerLightOSSDK.getInstance().getClient().getCustomAudioRecord();
 ```
 
-##### 3.2.5.2 getAudioStatus
+#### 3.2.5.2 getAudioStatus
 
 **接口功能描述**
 
@@ -384,7 +386,7 @@ DuerLightOSSDK.getInstance().getClient().getCustomAudioRecord();
 mCustomAudioRecord.getAudioStatus();
 ```
 
-##### 3.2.5.3 startRecord
+#### 3.2.5.3 startRecord
 
 **接口功能描述**
 
@@ -409,7 +411,7 @@ mCustomAudioRecord.getAudioStatus();
 ```
 mCustomAudioRecord.startRecord(16000);
 ```
-##### 3.2.5.4 sendVoiceData
+#### 3.2.5.4 sendVoiceData
 
 **接口功能描述**
 
